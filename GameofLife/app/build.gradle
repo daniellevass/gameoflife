@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "gameoflife.danielle.dev.com.gameoflife"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }
@@ -25,4 +25,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
     compile 'cyd.awesome.android:awesome-material:1.0'
+    testCompile 'org.robolectric:robolectric:3.0'
 }
