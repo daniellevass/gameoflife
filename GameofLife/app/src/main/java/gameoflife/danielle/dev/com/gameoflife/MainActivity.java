@@ -245,4 +245,9 @@ public class MainActivity extends AppCompatActivity {
         enableGameButtons(true);
 
     }
+
+
+    public GameObject getGame() {
+        return game;
+    }
 }

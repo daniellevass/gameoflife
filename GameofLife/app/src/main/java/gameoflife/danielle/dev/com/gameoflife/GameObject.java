@@ -309,7 +309,7 @@ public class GameObject {
      * @param y - the y coordinate
      * @return int with number of neighbours alive
      */
-    private int numberOfCellsAliveToCoordinate(int x, int y){
+    public int numberOfCellsAliveToCoordinate(int x, int y){
 
         int cellsAlive = 0;
 
@@ -338,7 +338,7 @@ public class GameObject {
      * @param numberOfNeighboursAlive - number of cells surrounding that were alive
      * @return boolean for whether it is alive or not
      */
-    private boolean determineIfCellLivesOrDies(boolean currentlyAlive, int numberOfNeighboursAlive){
+    public boolean determineIfCellLivesOrDies(boolean currentlyAlive, int numberOfNeighboursAlive){
 
         //check if we current cell was already alive
         if (currentlyAlive){
@@ -394,4 +394,13 @@ public class GameObject {
 //
 //        return sb.toString();
 //    }
+
+
+    public void setUniverse(boolean[][] universe) {
+        this.universe = universe;
+    }
+
+    public void setOldUniverse(boolean[][] oldUniverse) {
+        this.oldUniverse = oldUniverse;
+    }
 }
