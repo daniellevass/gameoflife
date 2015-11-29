@@ -1,34 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:awesome="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="gameoflife.danielle.dev.com.gameoflife.MainActivity">
+    >
 
-    <android.support.design.widget.AppBarLayout
+    <!-- game controls -->
+    <LinearLayout
+        android:id="@+id/layoutGameControls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:background="@color/md_blue_grey_900"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="5dp">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnPlay"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    </android.support.design.widget.AppBarLayout>
+            android:text="Play"
+            android:textSize="18sp"
 
-    <include layout="@layout/content_main" />
+            awesome:awesome_type="material_green"
+            awesome:awesome_icon_left="MD_PLAY_CIRCLE_FILL"
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+            />
+
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnStop"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Stop"
+            android:textSize="18sp"
+            android:visibility="gone"
+            awesome:awesome_type="material_red"
+            awesome:awesome_icon_left="MD_PAUSE_CIRCLE_FILL"
+
+            />
+
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnStep"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Step"
+            android:textSize="18sp"
+
+            awesome:awesome_type="bootstrap_default"
+            awesome:awesome_icon_left="MD_SKIP_NEXT"
+
+            />
+
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnClear"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Clear"
+            android:textSize="18sp"
+
+            awesome:awesome_type="bootstrap_default"
+            awesome:awesome_icon_left="MD_CLEAR"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSampleStartingPatterns"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:background="@color/md_blue_grey_800"
+        android:layout_below="@id/layoutGameControls"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="5dp">
 
-</android.support.design.widget.CoordinatorLayout>
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnGlider"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Glider"
+            android:textSize="12sp"
+
+            awesome:awesome_type="material_blue_grey"
+            awesome:awesome_icon_left="MD_FLIGHT"
+
+            />
+
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnBeacon"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Beacon"
+            android:textSize="12sp"
+
+            awesome:awesome_type="material_blue_grey"
+            awesome:awesome_icon_left="MD_CENTER_FOCUS_STRONG"
+
+            />
+
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnPulsar"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Pulsar"
+            android:textSize="12sp"
+
+            awesome:awesome_type="material_blue_grey"
+            awesome:awesome_icon_left="MD_BLUR_CIRCULAR"
+
+            />
+
+        <cyd.awesome.material.AwesomeButton
+            android:id="@+id/btnRandom"
+            style="@style/AwesomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Random"
+            android:textSize="12sp"
+
+            awesome:awesome_type="material_blue_grey"
+            awesome:awesome_icon_left="MD_NEW_RELEASES"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <cyd.awesome.material.AwesomeText
+        android:id="@+id/lblCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutSampleStartingPatterns"
+        android:scrollbars = "horizontal|vertical"
+        android:maxLines="500"
+        android:padding="10dp"
+        android:background="@color/md_grey_900"
+        android:textColor="@color/md_yellow_500"
+        android:scrollbarStyle="outsideOverlay"
+
+        android:textSize="10sp"
+        awesome:awesome_font="material_design"/>
+
+
+
+
+
+
+    </RelativeLayout>
