@@ -2,9 +2,9 @@
 
 Please read this http://www.conwaylife.com/wiki/Main_Page for more information :smile:
 
-![Example Pulsar](http://i.imgur.com/E93PfSs.gifv)
+![Example Pulsar](http://i.imgur.com/E93PfSs.gif)
 
-![Example Glider Gun](http://i.imgur.com/RyMv30Q.gifv)
+![Example Glider Gun](http://i.imgur.com/RyMv30Q.gif)
 
 ## Installation Instructions
 
